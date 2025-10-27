@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Film Photography | Sonal Arya</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+      html {
+        scroll-behavior: smooth;
+      }
+      /* Matching the requested theme: Black (#050505) and Red (#f87171) */
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #050505;
+        color: #e0e0e0;
+      }
+
+      /* Red accent for links */
+      .nav-link {
+        position: relative;
+        transition: color 0.3s ease;
+      }
+      .nav-link:hover {
+        color: #f87171;
+      }
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        width: 100%;
+        height: 2px;
+        background-color: #f87171;
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+      }
+      .nav-link:hover::after {
+        transform: scaleX(1);
+      }
+
+      .section-fade {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+      }
+      .section-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .image-card {
+        box-shadow: 0 5px 20px rgba(248, 113, 113, 0.1); /* Subtle red shadow */
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .image-card:hover {
+        transform: scale(1.02);
+        box-shadow: 0 8px 30px rgba(248, 113, 113, 0.3);
+      }
+    </style>
+  </head>
+  <body class="min-h-screen">
+    <!-- Navigation Bar (Sticky) - Consistent with other pages -->
+    <header
+      class="sticky top-0 z-50 bg-[#050505] bg-opacity-95 shadow-2xl backdrop-blur-sm border-b border-gray-900/50"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center"
+      >
+        <a
+          href="#hero-section"
+          class="text-2xl font-black tracking-widest text-red-500 hover:text-red-400 transition transform hover:scale-[1.01]"
+        >
+          SONAL ARYA
+        </a>
+        <nav class="flex space-x-6">
+          <!-- Home Link -->
+          <a
+            href="/index.html"
+            class="text-sm font-semibold text-red-500 transition duration-300 p-2 rounded-md bg-gray-900/50"
+            >Home</a
+          >
+
+          <!-- NEW FLAT LINKS (FORMERLY DROPDOWN) -->
+          <a
+            href="/films.html"
+            class="text-sm font-semibold hover:text-red-500 transition duration-300 p-2 rounded-md hover:bg-gray-900/50"
+            >Films (DOP)</a
+          >
+          <a
+            href="/camer_training.html"
+            class="text-sm font-semibold hover:text-red-500 transition duration-300 p-2 rounded-md hover:bg-gray-900/50"
+            >Camera Trainee</a
+          >
+
+          <!-- Flat Links -->
+          <a
+            href="/filmphotography.html"
+            class="text-sm font-semibold hover:text-red-500 transition duration-300 p-2 rounded-md hover:bg-gray-900/50"
+            >Film Photography</a
+          >
+          <a
+            href="/index.html#contact"
+            class="text-sm font-semibold hover:text-red-500 transition duration-300 p-2 rounded-md hover:bg-gray-900/50"
+            >Contact</a
+          >
+        </nav>
+      </div>
+    </header>
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <!-- Introduction -->
+      <section class="mb-20 section-fade section-visible">
+        <p class="text-xl font-light text-red-400 mb-2">
+          Analog and Digital Stills
+        </p>
+        <h1
+          class="text-6xl lg:text-7xl font-extrabold text-white tracking-tighter mb-6"
+        >
+          Visual Storytelling in Frames
+        </h1>
+        <div class="max-w-4xl">
+          <p class="text-gray-300 text-lg leading-relaxed">
+            This gallery is a collection of still photography, captured
+            primarily on 35mm film (Kodak Portra/Tri-X) and high-resolution
+            digital cameras. These images explore light, composition, and mood,
+            reflecting the same foundational principles I bring to motion
+            picture cinematography.
+          </p>
+        </div>
+      </section>
+
+      <!-- Photography Grid -->
+      <section class="mt-24 section-fade">
+        <h2
+          class="text-4xl font-extrabold text-white mb-10 border-b border-gray-700 pb-4 text-red-400"
+        >
+          Selected Stills Collection
+        </h2>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <!-- Photo 1: Horizontal -->
+          <div
+            class="col-span-2 image-card bg-gray-900 rounded-xl overflow-hidden border border-gray-800"
+          >
+            <img
+              src="https://placehold.co/1200x800/181818/e0e0e0?text=LANDSCAPE+1"
+              alt="Urban Night Scene"
+              class="w-full h-auto object-cover aspect-[3/2]"
+            />
+            <p class="p-3 text-xs text-gray-400">
+              Urban Night - Fuji Superia 400
+            </p>
+          </div>
+
+          <!-- Photo 2: Vertical -->
+          <div
+            class="image-card bg-gray-900 rounded-xl overflow-hidden border border-gray-800"
+          >
+            <img
+              src="https://placehold.co/800x1200/181818/e0e0e0?text=PORTRAIT+1"
+              alt="Dramatic Portrait"
+              class="w-full h-auto object-cover aspect-[2/3]"
+            />
+            <p class="p-3 text-xs text-gray-400">
+              Contrasted Portrait - Digital Black & White
+            </p>
+          </div>
+
+          <!-- Photo 3: Square -->
+          <div
+            class="image-card bg-gray-900 rounded-xl overflow-hidden border border-gray-800"
+          >
+            <img
+              src="https://placehold.co/800x800/181818/e0e0e0?text=SQUARE+1"
+              alt="Abstract Geometry"
+              class="w-full h-auto object-cover aspect-square"
+            />
+            <p class="p-3 text-xs text-gray-400">
+              Geometry and Light - Kodak Ektar 100
+            </p>
+          </div>
+
+          <!-- Photo 4: Vertical -->
+          <div
+            class="image-card bg-gray-900 rounded-xl overflow-hidden border border-gray-800"
+          >
+            <img
+              src="https://placehold.co/800x1200/181818/e0e0e0?text=PORTRAIT+2"
+              alt="Street Photography"
+              class="w-full h-auto object-cover aspect-[2/3]"
+            />
+            <p class="p-3 text-xs text-gray-400">Street Moment - Tri-X 400</p>
+          </div>
+
+          <!-- Photo 5: Horizontal -->
+          <div
+            class="col-span-2 image-card bg-gray-900 rounded-xl overflow-hidden border border-gray-800"
+          >
+            <img
+              src="https://placehold.co/1200x800/181818/e0e0e0?text=ARCHITECTURE+2"
+              alt="Architectural Study"
+              class="w-full h-auto object-cover aspect-[3/2]"
+            />
+            <p class="p-3 text-xs text-gray-400">
+              Architectural Study - Long Exposure
+            </p>
+          </div>
+
+          <!-- Photo 6: Square -->
+          <div
+            class="image-card bg-gray-900 rounded-xl overflow-hidden border border-gray-800"
+          >
+            <img
+              src="https://placehold.co/800x800/181818/e0e0e0?text=SQUARE+2"
+              alt="Macro Detail"
+              class="w-full h-auto object-cover aspect-square"
+            />
+            <p class="p-3 text-xs text-gray-400">
+              Macro Detail - Natural Light
+            </p>
+          </div>
+        </div>
+
+        <!-- Call to Action / Medium Link -->
+        <div class="text-center mt-16 pt-8 border-t border-gray-800">
+          <p class="text-xl text-gray-400 mb-4">
+            View my complete archive on Instagram or Flickr.
+          </p>
+          <a
+            href="#"
+            class="inline-block px-8 py-3 text-lg font-bold text-white bg-red-600 rounded-full shadow-lg shadow-red-900/50 hover:bg-red-500 transition duration-300"
+          >
+            Explore Full Gallery →
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-[#0f0f0f] py-6 mt-20 border-t border-gray-900">
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-600 text-sm"
+      >
+        &copy; 2025 Sonal Arya. Cinematography Portfolio.
+      </div>
+    </footer>
+
+    <!-- Script for fade-in effect -->
+    <script>
+      // Intersection Observer for fade-in effect
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("section-visible");
+              // Stop observing once visible
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+
+      // Initialize observation on load
+      window.onload = function () {
+        document.querySelectorAll(".section-fade").forEach((section) => {
+          observer.observe(section);
+        });
+      };
+    </script>
+  </body>
+</html>
